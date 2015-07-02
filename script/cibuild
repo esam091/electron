@@ -10,11 +10,15 @@ from lib.util import execute, rm_rf, scoped_env
 SOURCE_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 LINUX_DEPS = [
+  'libasound2-dev',
+  'libcap-dev',
+  'libcups2-dev',
   'libdbus-1-dev',
   'libgconf2-dev',
   'libgnome-keyring-dev',
   'libgtk2.0-dev',
   'libnotify-dev',
+  'libxtst-dev',
   'gcc-multilib',
   'g++-multilib',
 ]
