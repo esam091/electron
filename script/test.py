@@ -17,7 +17,7 @@ def main():
   os.chdir(SOURCE_ROOT)
 
   config = 'D'
-  if len(sys.argv) == 2 and sys.argv[1] == '-R':
+  if len(sys.argv) > 1 and (sys.argv[1] == '-R' or sys.argv[2] == '-R'):
     config = 'R'
 
   if sys.platform == 'darwin':
