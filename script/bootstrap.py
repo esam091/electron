@@ -86,7 +86,11 @@ def bootstrap_brightray(is_dev, url, target_arch):
   ]
   if is_dev:
     args = ['--dev'] + args
-  execute_stdout([sys.executable, bootstrap] + args)
+  if os.environ.has_key('CI'):
+    verbose = True
+  else:
+    verbose = False
+  execute_stdout([sys.executable, bootstrap] + args, verbose=verbose)
 
 
 def update_node_modules(dirname, env=None):
